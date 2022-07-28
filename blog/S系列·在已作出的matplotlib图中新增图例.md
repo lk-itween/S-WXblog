@@ -72,9 +72,9 @@ if __name__ == '__main__':
 
 假设本次需要猜测的目标单词是world，以下为猜测两次的显示结果：  
 
-![](https://s2.loli.net/2022/06/06/WT1hSHfiYO4pBUV.png)  
+![](../images/S_xilie_2_1.png)  
 
-![](https://s2.loli.net/2022/06/06/uUKv1aNDJTdF9Om.png)  
+![](../images/S_xilie_2_2.png)  
 
 可以看到，两次显示是独立的，在matplotlib作图中，在plt.show()显示完毕后，之前定义的fig对象就为空，如果想直接显示两个图像，会在plt.show之前将两者放在同一张图中，如此处的字母绘制，遍历每个字母列表，逐个的显示在图像中，而猜测过程中，不能提前得知猜测的是何值，则不能在plt.show之前将后续猜测的值显示出来，在matplotlib中有这种调取上一次显示的结果的方法，通过画图管理器将本次的结果显示在上一张图像中。  
 
@@ -133,9 +133,9 @@ if __name__ == '__main__':
 
 与上一代码不同处仅在于，在绘制图像时，将已存在的图像`fig`对象，作为当前的绘图对象。以下为猜测两次的显示结果：  
 
-![](https://s2.loli.net/2022/06/06/PSgzB9quvC3KhbR.png)  
+![](../images/S_xilie_2_3.png)  
 
-![](https://s2.loli.net/2022/06/06/9TmH62QYNZkSj4D.png)  
+![](../images/S_xilie_2_4.png)  
 
 在第二次输入猜测值后，显示的结果出现在上一张图中。  
 
