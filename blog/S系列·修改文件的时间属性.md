@@ -16,9 +16,9 @@ S又称水，亦可读作Small，在日常工作学习过程中，偶尔会发�
 
 在windows电脑中，右击文件，再点击属性，能明显地看到创建时间，修改时间和访问时间。  
 
-![](https://s2.loli.net/2022/05/30/5sCUzVg9DoYXBNL.png)  
+![](../images/S_xilie_1_1.png)  
 
-![](https://s2.loli.net/2022/05/30/9JdEmAY516TDtKf.png)  
+![](../images/S_xilie_1_2.png)  
 
 三个时间的含义如名称一样，最容易发生变动的为访问时间，只要对文件做了任何操作，都会发生变化，当对文件进行修改且保存了，修改时间就会发生变化，而创建时间是在文件创建时就已经设定了，可看到该文件中创建时间时间最早，单独对此文件左点右点是很难改变这个时间的。  
 
@@ -32,11 +32,11 @@ import os
 os.stat(r"C:\Users\admin\Desktop\1231.xlsx")
 ```
 
-![](https://s2.loli.net/2022/05/30/tgHuKBPDopXjsWI.png)  
+![](../images/S_xilie_1_3.png)  
 
 时间属性均是以时间戳的方式保存，如果尝试取出属性值修改，会产生报错，仅读属性不能修改。  
 
-![](https://s2.loli.net/2022/05/30/Ld52nGw3NRIZQFi.png)  
+![](../images/S_xilie_1_4.png)  
 
 `os.utime`可以帮助修改时间属性，但仅能修改访问时间和修改时间，且传入的时间参数应当为时间戳。
 
@@ -51,7 +51,7 @@ os.utime(r"C:\Users\admin\Desktop\1231.xlsx", (a_time, m_time))
 
 修改完后再次查看文件属性。  
 
-![](https://s2.loli.net/2022/05/30/ZravsqiU8gl3ouY.png)  
+![](../images/S_xilie_1_5.png)  
 
 虽然仅能看到修改时间按设想成功设置为2024-05-01，访问时间其实也是设置好了，但由于太灵活，在设置修改时间时，对文件进行了访问，从而设置成当前的操作时间。  
 
@@ -94,7 +94,7 @@ modifyFileTime(r"C:\Users\admin\Desktop\1231.xlsx", '20240501 01:01:01', '202405
 
 分别对创建时间设置成2024年5月1号的1点、2点和3点。  
 
-![](https://s2.loli.net/2022/05/30/fQIldDRMSN1b93C.png)  
+![](../images/S_xilie_1_6.png)  
 
 都设置成功了。  
 
@@ -120,7 +120,7 @@ def modifytime(filename, ctime, mtime, atime):
 modifytime(r"C:\Users\admin\Desktop\1231.xlsx", '20240502 10:00:00', '20240502 11:00:00', '20240502 12:00:00')
 ```
 
-![](https://s2.loli.net/2022/05/30/PQvjDkW4MLp1RCG.png)  
+![](../images/S_xilie_1_7.png)  
 
 ## 结语
 
