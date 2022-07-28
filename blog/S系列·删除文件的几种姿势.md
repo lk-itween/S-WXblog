@@ -75,9 +75,9 @@ rmtree(delete_dir)
 
 `rmtree`递归返回该目录下所有文件及文件夹，并将其删除，原理同`姿势二`，以下为`rmtree`核心代码部分：  
 
-![](https://s2.loli.net/2022/06/08/a2snMTy7fzVZlRE.png)  
+![](../images/S_xilie_4_1.png)  
 
-![](https://s2.loli.net/2022/06/08/VshyKfRkiYOb89c.png)  
+![](../images/S_xilie_4_2.png)  
 
 `rmtree`首先判断删除方式是否为安全删除，以安全删除方式为例，对递归结果进行判断，如果为文件夹，判断内层是否还有文件，如果还有进行递归，再对递归结果做删除操作，如果为文件，直接进行删除，此种方式相比`姿势二`有了更多对文件状态的判断。  
 
